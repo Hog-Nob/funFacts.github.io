@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Facts about Imaginary Animals</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #fact-display {
+            font-size: 1.5em;
+            margin: 20px 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #6200ea;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Fun Facts about Imaginary Animals</h1>
+        <p id="fact-display">Click the button to generate a fun fact!</p>
+        <button id="generate-fact">Generate Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "The Fluffernut is a creature that can change its color based on its mood.",
+            "The Snorflax can produce a sound that makes everyone around it laugh uncontrollably.",
+            "The Glimmerbeast has fur that sparkles like stars in the night sky.",
+            "The Wobblewump can float in the air by using its oversized ears.",
+            "The Quizzlepuff can create illusions that confuse its friends and foes alike.",
+            "The Bounceroo has springs for legs, allowing it to jump incredibly high.",
+            "The Shimmerwhisker can emit a soft glow in the dark, guiding lost travelers.",
+            "The Gigglehorn has a horn that produces a sound like laughter when it is happy.",
+            "The Dreamcatcher Owl can capture dreams and share them with others.",
+            "The Snugglebug is known for its warm, fuzzy body that provides comfort to anyone who hugs it.",
+            "The Twinkletoes is a tiny creature that dances on rainbows.",
+            "The Puddlejumper can leap from puddle to puddle without getting wet.",
+            "The Whimsical Wisp can create gentle breezes that carry sweet scents.",
+            "The Fuzzlebeast has a coat of fur that feels like cotton candy.",
+            "The Squeakle is a mouse-like creature that can mimic any sound it hears.",
+            "The Glimmerfin is a fish that glows in the dark, attracting curious onlookers.",
+            "The Snickerpuff can blow bubbles that float and pop with a giggle.",
+            "The Doodlebug can draw pictures in the sand with its tail.",
+            "The Jolly Jotter can write messages in the air with its magical quill.",
+            "The Cuddlefluff is known for its soft, plush-like body that everyone wants to hug.",
+            "The Fizzlebop can create fizzy drinks from the air around it.",
+            "The Wiggly Worm can twist and turn in ways that make it look like it's dancing.",
+            "The Purrling is a cat-like creature that purrs soothing melodies.",
+            "The Buzzybee can fly in circles while making a sweet humming sound.",
+            "The Snifflesnout has a nose that can detect the happiest scents.",
+            "The Ticklebug can make anyone laugh with its gentle tickling touch.",
+            "The Glimmerwing is a butterfly that sparkles in the sunlight.",
+            "The Fluffaroo is a kangaroo-like creature that loves to bounce around.",
+            "The Chortlefish can swim in the air and giggle as it goes.",
+            "The Wobblewhisk can balance on its tail while juggling colorful orbs.",
+            "The Dreamweaver can weave dreams into beautiful tapestries.",
+            "The Snugglepuff is a cloud-like creature that provides warmth and comfort.",
+            "The Fuzzlewhisk can tickle anyone with its fluffy tail."
+        ];
+
+        document.getElementById('generate-fact').addEventListener('click', generateFact);
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const factDisplay = document.getElementById('fact-display');
+            
+            // Add transition effect
+            factDisplay.style.opacity = 0;
+            setTimeout(() => {
+                factDisplay.textContent = facts[randomIndex];
+                factDisplay.style.opacity = 1;
+            }, 500);
+        }
+    </script>
+</body>
+</html>
